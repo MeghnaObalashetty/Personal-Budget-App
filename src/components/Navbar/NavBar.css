@@ -1,0 +1,50 @@
+.navbar-brand {
+    color: white;
+}
+
+.float-list-item {
+    float: left;
+    margin-right: 10px;
+    /* Add margin as needed */
+}
+
+.navbar-collapse {
+    flex-direction: row-reverse;
+    color: white;
+}
+
+.navbar-brand,
+.nav-link {
+    color: white;
+}
+
+.navbar {
+    background-color: #FFB6C1;
+    padding: 20px;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+li {
+    display: inline;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.username {
+    float: left;
+}

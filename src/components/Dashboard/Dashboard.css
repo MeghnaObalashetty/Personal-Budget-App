@@ -1,0 +1,70 @@
+/* Dashboard.css */
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+    /* Set the table layout to fixed */
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    width: 150px;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+th {
+    background-color: #ccc;
+}
+
+
+/* Responsive CSS using media queries */
+
+@media (max-width: 768px) {
+    table {
+        overflow-x: auto;
+        display: block;
+    }
+    th,
+    td {
+        white-space: nowrap;
+        /* Reset width for smaller screens */
+        overflow: visible;
+        /* Show overflow content for smaller screens */
+        text-overflow: initial;
+        /* Reset text-overflow property */
+    }
+    tbody {
+        display: block;
+        overflow-y: auto;
+        max-height: 300px;
+        /* Adjust max height as needed */
+    }
+    tr {
+        display: table-row;
+        vertical-align: inherit;
+        border-color: inherit;
+        background-color: #f9f9f9;
+    }
+    td {
+        display: table-cell;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+}
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+    /* Ensures the container takes at least the full viewport height */
+}

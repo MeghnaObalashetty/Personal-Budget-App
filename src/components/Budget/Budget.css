@@ -1,0 +1,65 @@
+/* BudgetPage.css */
+
+.budgetPage {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.budgetPage h3 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: calc(100% - 22px);
+    /* Adjusted width to consider padding and border */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-bottom: 10px;
+    /* Added margin bottom for inputs and select */
+}
+
+h4 {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+/* Styling for Previous Expenses link button */
+
+.btn-primary {
+    background-color: #CC8899;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+}
