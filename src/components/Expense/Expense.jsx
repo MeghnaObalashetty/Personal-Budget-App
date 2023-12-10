@@ -3,9 +3,10 @@ import axios from 'axios';
 import useTokenExpiration from '../TokenExpiration/TokenExpiration';
 
 const Expense = () => {
-  const checkTokenExpiration = useTokenExpiration();
+  const { showModal, handleExtendSession, handleLogout } = useTokenExpiration();
+  //const checkTokenExpiration = useTokenExpiration();
   // Call the token expiration check
-  checkTokenExpiration();
+  //checkTokenExpiration();
   
   const [details, setDetails] = useState({
     category: '',
@@ -140,6 +141,15 @@ const Expense = () => {
           Record Expense
         </button>
       </form>
+      {showModal && (
+         <div className="overlay">
+         <div className="modal-content">
+          <p>Your session is about to expire in 20 sec. Do you want to extend it?</p>
+          <button onClick={handleExtendSession}>Extend Session</button>
+          <button onClick={handleLogout}>Logout</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -3,9 +3,11 @@ import './Homepage.css';
 import useTokenExpiration from '../TokenExpiration/TokenExpiration';
 const Home = () => {
   const isLoggedIn = localStorage.getItem('username');
-  const checkTokenExpiration = useTokenExpiration();
+  const { showModal, handleExtendSession, handleLogout } = useTokenExpiration();
+
+  //const checkTokenExpiration = useTokenExpiration();
   // Call the token expiration check
-  checkTokenExpiration();
+  //checkTokenExpiration();
   return (
     <main className="home-container">
       <h2>Welcome to the Personal Budget App!</h2>
@@ -28,13 +30,22 @@ const Home = () => {
             <button className="btn btn-primary">Add Budget</button>
           </Link>
           <Link to="/Expense">
-            <button className="btn btn-primary">Add Expense</button>
+            <button className="btn btn-primary">Update Expense</button>
           </Link>
           <Link to="/deleteBudget">
             <button className="btn btn-primary">Delete Budget</button>
           </Link>
           </nav>
         </section>
+      )}
+       {showModal && (
+         <div className="overlay">
+         <div className="modal-content">
+          <p>Your session is about to expire in 20 sec. Do you want to extend it?</p>
+          <button onClick={handleExtendSession}>Extend Session</button>
+          <button onClick={handleLogout}>Logout</button>
+          </div>
+        </div>
       )}
     </main>
   );

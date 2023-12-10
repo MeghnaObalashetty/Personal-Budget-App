@@ -58,3 +58,9 @@ API served at http://localhost:3001
 TESTING:
 
 You can run Unit Test case using 'npm run test' in project folder(my-budget-tracker)
+
+E2E Testing using Cypress
+Install using npm install cypress --save-dev
+Open Using npx cypress open in terminal
+Run Using npx cypress run
+![Alt text](https://github.com/MeghnaObalashetty/Personal-Budget-App/blob/master/src/assets/E2ECypress.png)

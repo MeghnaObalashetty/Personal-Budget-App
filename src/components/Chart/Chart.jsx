@@ -7,9 +7,11 @@ import LineChart from './LineChart';
 import useTokenExpiration from '../TokenExpiration/TokenExpiration';
 
 const Chart = () => {
-  const checkTokenExpiration = useTokenExpiration();
+  const { showModal, handleExtendSession, handleLogout } = useTokenExpiration();
+
+  //const checkTokenExpiration = useTokenExpiration();
   // Call the token expiration check
-  checkTokenExpiration();
+  //checkTokenExpiration();
   
   const [budgetDetails, setBudgetDetails] = useState([]);
   const [error, setError] = useState(null);
@@ -28,7 +30,7 @@ const Chart = () => {
         setBudgetDetails(response.data.budgetDetails);
       })
       .catch(error => {
-        setError('Error fetching budget details', error);
+        setError('', error);
       });
   }, []);
 
@@ -143,6 +145,15 @@ const Chart = () => {
       </div>
       {/* Include LineChart component */}
       <LineChart />
+      {showModal && (
+         <div className="overlay">
+         <div className="modal-content">
+          <p>Your session is about to expire in 20 sec. Do you want to extend it?</p>
+          <button onClick={handleExtendSession}>Extend Session</button>
+          <button onClick={handleLogout}>Logout</button>
+          </div>
+        </div>
+      )}
     </div>  
   );
 };

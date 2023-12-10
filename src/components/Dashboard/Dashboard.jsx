@@ -4,9 +4,11 @@ import './Dashboard.css';
 import useTokenExpiration from '../TokenExpiration/TokenExpiration';
 
 const Dashboard = () => {
-  const checkTokenExpiration = useTokenExpiration();
+  //const checkTokenExpiration = useTokenExpiration();
   // Call the token expiration check
-  checkTokenExpiration();
+  //checkTokenExpiration();
+  const { showModal, handleExtendSession, handleLogout } = useTokenExpiration();
+
   const [budgetDetails, setBudgetDetails] = useState([]);
   const [error, setError] = useState(null);
 
@@ -20,7 +22,7 @@ const Dashboard = () => {
         setBudgetDetails(response.data.budgetDetails);
       })
       .catch((error) => {
-        setError('Error fetching budget details', error);
+        setError('', error);
       });
   }, []);
 
@@ -83,6 +85,15 @@ const Dashboard = () => {
           </div>
         </div>
       ))}
+      {showModal && (
+         <div className="overlay">
+         <div className="modal-content">
+          <p>Your session is about to expire in 20 sec. Do you want to extend it?</p>
+          <button onClick={handleExtendSession}>Extend Session</button>
+          <button onClick={handleLogout}>Logout</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

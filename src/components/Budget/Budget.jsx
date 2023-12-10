@@ -5,9 +5,11 @@ import useTokenExpiration from '../TokenExpiration/TokenExpiration';
 
 
 const Budget = () => {
-  const checkTokenExpiration = useTokenExpiration();
+  const { showModal, handleExtendSession, handleLogout } = useTokenExpiration();
+
+  //const checkTokenExpiration = useTokenExpiration();
   // Call the token expiration check
-  checkTokenExpiration();
+  //checkTokenExpiration();
   const [details, setDetails] = useState({
     id: "",
     category: "", 
@@ -122,6 +124,15 @@ const Budget = () => {
             Record Budget
           </button>
         </form>
+        {showModal && (
+         <div className="overlay">
+         <div className="modal-content">
+          <p>Your session is about to expire in 20 sec. Do you want to extend it?</p>
+          <button onClick={handleExtendSession}>Extend Session</button>
+          <button onClick={handleLogout}>Logout</button>
+          </div>
+        </div>
+      )}
       </div>
     </>
   );

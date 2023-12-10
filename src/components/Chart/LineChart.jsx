@@ -22,7 +22,7 @@ const LineChart = () => {
         setBudgetDetails(response.data.budgetDetails);
       })
       .catch(error => {
-        setError('Error fetching budget details', error);
+        setError('', error);
       });
   }, []);
 
