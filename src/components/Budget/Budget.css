@@ -34,7 +34,6 @@ select {
     border: 1px solid #ccc;
     font-size: 16px;
     margin-bottom: 10px;
-    /* Added margin bottom for inputs and select */
 }
 
 h4 {

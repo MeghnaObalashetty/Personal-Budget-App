@@ -73,7 +73,6 @@ const DeleteBudget = () => {
         });
     
         alert('Budget for the month Deleted successfully. Thank you.');
-        // Optionally, you can fetch updated budget details or perform other actions after successful deletion
       } catch (error) {
         console.error('Error deleting budget:', error);
         alert('Failed to delete budget. Please try again.');

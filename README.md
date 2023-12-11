@@ -27,36 +27,33 @@ Dashboard: To show all the expenses added in months.
 Visualization/Charts : Provides visual charts and graphs to display budget allocations, expenses, and trends over time(months).
 Accessibility: Designed with accessibility in mind to ensure a better user experience for everyone.
 
-Frontend (React with Vite)
+
 Clone the repository:
 git clone https://github.com/your-username/my-budget-tracker.git
 
-Navigate to the frontend directory:
-cd my-budget-tracker/
+Access the application at https://meghna-budget.netlify.app/ in your browser.
 
-Install dependencies:
-npm install
 
-Start the development server:
-npm run dev
-Access the application at http://localhost:5173/ in your browser.
+
+TO RUN THE PROJECT IN LOCAL :
+
+Navigate to the frontend directory:cd my-budget-tracker/
+Install dependencies:npm install
+Start the development server:npm run dev
+To Build : npm run build
+
 
 Backend (Node.js)
-Navigate to the backend directory:
-cd my-budget-tracker/Backend
-
-Install dependencies:
-npm install
+Navigate to the backend directory: cd my-budget-tracker/Backend
+Install dependencies:npm install
+Start the backend server:node server.js /npm start
 
 Set up the MySQL database:
 Create a MySQL database and configure the connection details in server.js file.
+I have used below cloud server: https://console.clever-cloud.com/ to host my database in cloud.
 
-Start the backend server:
-node server.js /npm start
-API served at http://localhost:3001
 
 TESTING:
-
 You can run Unit Test case using 'npm run test' in project folder(my-budget-tracker)
 ![Alt text](https://github.com/MeghnaObalashetty/Personal-Budget-App/blob/master/src/assets/UnitTest.png)
 
@@ -65,3 +62,5 @@ Install using npm install cypress --save-dev
 Open Using npx cypress open in terminal
 Run Using npx cypress run
 ![Alt text](https://github.com/MeghnaObalashetty/Personal-Budget-App/blob/master/src/assets/E2ELogin.png)
+
+You can view project screens and snapshots in the folder: src/assets

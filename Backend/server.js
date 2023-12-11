@@ -53,6 +53,7 @@ app.post("/login", async (req, res) => {
   });
 });
 
+// Signup endpoint 
 app.post("/signup", async (req, res) => {
   const sql =
     "INSERT INTO users_details(`id`, `name`, `email`, `password`) VALUES(?)";

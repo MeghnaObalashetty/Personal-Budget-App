@@ -59,7 +59,7 @@ const Budget = () => {
         <h3 style={{ textAlign: "center" }}>Record an Budget</h3>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-             {/* use of label,htmlFor for accessibilty   */}
+             {/* use of label,htmlFor,headings for accessibilty  */}
             <label htmlFor="category" className="category">
               Category
             </label>
