@@ -32,7 +32,7 @@ Clone the repository:
 git clone https://github.com/your-username/my-budget-tracker.git
 
 Access the application at https://meghna-budget.netlify.app in your browser.
-
+For First time it may take some time to Login.
 
 TO RUN THE PROJECT IN LOCAL :
 
