@@ -26,7 +26,7 @@ const DeleteBudget = () => {
     };
 
     axios
-      .post('http://localhost:3001/dashboard', userDetails)
+      .post('https://meghna-budget.onrender.com/dashboard', userDetails)
       .then((response) => {
         const responseData = response.data;
 
@@ -49,7 +49,7 @@ const DeleteBudget = () => {
   const fetchCategoriesByMonth = async (selectedMonth) => {
     try {
         const id = localStorage.getItem('id') || '';
-      const response = await axios.post('http://localhost:3001/categories', { month: selectedMonth,userId:id });
+      const response = await axios.post('https://meghna-budget.onrender.com/categories', { month: selectedMonth,userId:id });
       const responseData = response.data;
       console.log(responseData);
       if (Array.isArray(responseData)) {

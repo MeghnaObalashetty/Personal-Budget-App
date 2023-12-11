@@ -40,7 +40,7 @@ const Signup = () => {
     );
     if (allValuesAreEmpty) {  
       axios
-        .post("http://localhost:3001/signup", user)
+        .post("https://meghna-budget.onrender.com/signup", user)
         .then((res) => {
           console.log("res", res);
           alert("Registration completed successfully.");

@@ -36,7 +36,7 @@ const Budget = () => {
     details["id"] = localStorage.getItem("id") || "";
     console.log("details-->", details);
     axios
-      .post("http://localhost:3001/budgetList", details)
+      .post("https://meghna-budget.onrender.com/budgetList", details)
       .then((res) => {
         console.log("res", res);
       })

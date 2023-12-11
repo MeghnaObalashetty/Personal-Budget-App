@@ -39,7 +39,7 @@ npm install
 
 Start the development server:
 npm run dev
-Access the application at http://localhost:5173/ in your browser.
+Access the application at https://meghna-budget.netlify.app/ in your browser.
 
 Backend (Node.js)
 Navigate to the backend directory:
@@ -53,7 +53,7 @@ Create a MySQL database and configure the connection details in server.js file.
 
 Start the backend server:
 node server.js /npm start
-API served at http://localhost:3001
+API served at https://meghna-budget.onrender.com
 
 TESTING:
 

@@ -17,7 +17,7 @@ const Dashboard = () => {
   };
 
   useEffect(() => {
-    axios.post('http://localhost:3001/dashboard', userDetails)
+    axios.post('https://meghna-budget.onrender.com/dashboard', userDetails)
       .then(response => {
         setBudgetDetails(response.data.budgetDetails);
       })

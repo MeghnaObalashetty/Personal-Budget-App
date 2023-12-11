@@ -2,7 +2,7 @@
 
 describe('Home Page', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:5173/') // Assuming the homepage URL is '/'
+    cy.visit('https://meghna-budget.netlify.app/') // Assuming the homepage URL is '/'
   });
 
   it('renders correctly', () => {
@@ -19,7 +19,7 @@ describe('Home Page', () => {
 //E2E test case for login
 describe('Login Component Tests', () => {
   it('successfully logs in with correct credentials', () => {
-    cy.visit('http://localhost:5173/login'); // Replace with your app's URL
+    cy.visit('https://meghna-budget.netlify.app/login'); // Replace with your app's URL
 
     cy.get('input[name="email"]').type('abc@gmail.com');
     cy.get('input[name="password"]').type('Qwerty2023');
@@ -31,7 +31,7 @@ describe('Login Component Tests', () => {
   });
 
   it('displays error message with incorrect credentials', () => {
-    cy.visit('http://localhost:5173/login'); // Replace with your app's URL
+    cy.visit('https://meghna-budget.netlify.app/login'); // Replace with your app's URL
 
     cy.get('input[name="email"]').type('invalid@example.com');
     cy.get('input[name="password"]').type('wrongpassword');
