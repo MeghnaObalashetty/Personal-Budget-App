@@ -23,7 +23,7 @@ const Login = () => {
     };
 
     axios
-      .post("http://localhost:3001/login", details)
+      .post("https://meghna-budget.onrender.com/login", details)
       .then((res) => {
         console.log("res--->", res, res.data.password);
         if (res.data.Login) {
