@@ -31,8 +31,7 @@ Accessibility: Designed with accessibility in mind to ensure a better user exper
 Clone the repository:
 git clone https://github.com/your-username/my-budget-tracker.git
 
-Access the application at https://meghna-budget.netlify.app/ in your browser.
-
+Access the application at https://meghna-budget.netlify.app in your browser.
 
 
 TO RUN THE PROJECT IN LOCAL :
@@ -52,6 +51,9 @@ Set up the MySQL database:
 Create a MySQL database and configure the connection details in server.js file.
 I have used below cloud server: https://console.clever-cloud.com/ to host my database in cloud.
 
+WEBSITE HOSTING:
+
+I have used Render(https://dashboard.render.com/) and Netlify(https://app.netlify.com/) to host my project.
 
 TESTING:
 You can run Unit Test case using 'npm run test' in project folder(my-budget-tracker)
@@ -64,3 +66,4 @@ Run Using npx cypress run
 ![Alt text](https://github.com/MeghnaObalashetty/Personal-Budget-App/blob/master/src/assets/E2ELogin.png)
 
 You can view project screens and snapshots in the folder: src/assets
+
