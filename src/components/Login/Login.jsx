@@ -25,7 +25,7 @@ const Login = () => {
     axios
       .post("https://meghna-budget.onrender.com/login", details)
       .then((res) => {
-        console.log("res--->", res, res.data.password);
+        //console.log("res--->", res, res.data.password);
         if (res.data.Login) {
           localStorage.setItem("username", res.data.username);
           localStorage.setItem("password", res.data.password);

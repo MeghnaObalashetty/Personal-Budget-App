@@ -20,7 +20,7 @@ const Validations = (user) => {
   //     errors.phone = "Phone should not be Empty...";
   //   }
   if (!password_pattern.test(user.password)) {
-    errors.password = "Password didn't meet the requirements";
+    errors.password = "Password didn't meet the requirements it should have digits and characters";
   }
   if (user.confirmPassword !== user.password) {
     errors.confirmPassword = "Password not matched";
