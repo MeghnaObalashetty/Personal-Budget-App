@@ -40,13 +40,19 @@ const Signup = () => {
     );
     if (allValuesAreEmpty) {  
       axios
-        .post("https://meghna-budget.onrender.com/signup", user)
-        .then((res) => {
-          console.log("res", res);
-          alert("Registration completed successfully.");
-          navigate("/login");
-        })
-        .catch((err) => console.log(err));
+      .post("https://meghna-budget.onrender.com/signup", user)
+      .then((res) => {
+        console.log("res", res);
+        alert("Registration completed successfully.");
+        navigate("/login");
+      })
+      .catch((err) => {
+        if (err.response && err.response.data && err.response.data.error === "Email already exists") {
+          setError({ ...error, email: "Email already exists" });
+        } else {
+          console.log(err);
+        }
+      });
     }
     e.preventDefault();
   };

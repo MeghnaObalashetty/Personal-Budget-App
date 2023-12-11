@@ -55,8 +55,18 @@ app.post("/login", async (req, res) => {
 
 // Signup endpoint 
 app.post("/signup", async (req, res) => {
-  const sql =
-    "INSERT INTO users_details(`id`, `name`, `email`, `password`) VALUES(?)";
+  const email = req.body.email;
+  const checkEmailQuery = "SELECT * FROM users_details WHERE email = ?";
+  // Check if the email already exists
+  db.query(checkEmailQuery, [email], (err, results) => {
+    if (err) {
+      return res.status(500).json({ error: "Internal server error" });
+    }
+    if (results.length > 0) {
+      // Email already exists, return an error
+      return res.status(400).json({ error: "Email already exists" });
+    } else {
+  const sql ="INSERT INTO users_details(`id`, `name`, `email`, `password`) VALUES(?)";
   const values = [
     req.body.id,
     req.body.fullname,
@@ -68,6 +78,8 @@ app.post("/signup", async (req, res) => {
       return res.json(err);
     }
     return res.json(data);
+    });
+  }
   });
 });
 
