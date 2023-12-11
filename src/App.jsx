@@ -11,7 +11,6 @@ import './App.css'
 import Dashboard from "./components/Dashboard/Dashboard";
 import ExpenseForm from "./components/Expense/Expense";
 import DeleteBudget from "./components/DeleteBudget/DeleteBudget";
-import Background from "./components/Background/Background";
 const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -31,8 +30,8 @@ function App() {
       <MainContent>
       
         <Routes>
-        <Route path="/" element={( <Background> <Home /> </Background> )} />
-        <Route path="/home" element={( <Background> <Home /> </Background> )} />
+        <Route path="/" element={(  <Home />)} />
+        <Route path="/home" element={(<Home />  )} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/budget" element={<Budget />} />

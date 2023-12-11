@@ -68,7 +68,7 @@ const DeleteBudget = () => {
         const id = localStorage.getItem('id') || '';
         const { month, category } = details;
     
-        await axios.delete('http://localhost:3001/deleteBudget', {
+        await axios.delete('https://meghna-budget.onrender.com/deleteBudget', {
           data: { month, userId: id, category },
         });
     
